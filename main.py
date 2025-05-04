@@ -61,12 +61,14 @@ if __name__ == '__main__':
                 print("Your input was not a valid integer")
 
 
+        #TODO this needs to be fixed there is a Value Error even with good input
         elif user_input == "random var":
             pass
             name = input ("Name of the Experiment: ")
             xi = input("The values of xi: ")
             Pxi = input("The probabilities of the xi`s: ")
             try:
+                tabelle_random_var(name, [float(x.strip()) for x in xi.split(",")], [float(x.strip()) for x in Pxi.split(",")])
         # TODO this needs to be fixed there is a problem with the input of lists
                 tabelle_random_var(name, xi, Pxi)
             except ValueError:
