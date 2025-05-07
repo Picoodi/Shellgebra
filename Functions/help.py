@@ -19,7 +19,6 @@ def help_and_descriptions():
           "\n"
           "STATISTICS \n"
           "- binom dis                              gives you all specific infos about your binominal distribution\n"
-          "- random var                             gives you all specific infos about your random variable\n"
           "\n"
           "\n"
           "SEQUENCE / SERIE \n"

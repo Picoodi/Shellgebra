@@ -11,8 +11,10 @@ if __name__ == '__main__':
     while True:
         user_input = input(">> ")
 
+        if user_input == "":
+            pass
 
-        if user_input.lower() == "exit":
+        elif user_input.lower() == "exit":
             exit()
 
         elif user_input.lower() == "help":
@@ -26,7 +28,6 @@ if __name__ == '__main__':
                 print("Your input was not a valid equation")
             except NameError:
                 print("Your input was not a valid equation")
-
 
         elif user_input.startswith("is prime "):
             try:
@@ -59,20 +60,9 @@ if __name__ == '__main__':
                 tabelle_binom(name, int(n), float(p))
             except ValueError:
                 print("Your input was not a valid integer")
+            except OverflowError:
+                print("Sry but the programm has an overflow error")
 
-
-        #TODO this needs to be fixed there is a Value Error even with good input
-        elif user_input == "random var":
-            pass
-            name = input ("Name of the Experiment: ")
-            xi = input("The values of xi: ")
-            Pxi = input("The probabilities of the xi`s: ")
-            try:
-                tabelle_random_var(name, [float(x.strip()) for x in xi.split(",")], [float(x.strip()) for x in Pxi.split(",")])
-        # TODO this needs to be fixed there is a problem with the input of lists
-                tabelle_random_var(name, xi, Pxi)
-            except ValueError:
-                print("Your input was not a valid integer")
 
 
         else:
