@@ -63,6 +63,12 @@ if __name__ == '__main__':
             except OverflowError:
                 print("Sry but the programm has an overflow error")
 
+        elif user_input.startswith("bin "):
+            try:
+                print(binary_system(int(user_input[4:])))
+            except ValueError:
+                print("Your input was not a valid integer")
+
 
 
         else:
